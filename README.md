@@ -61,6 +61,7 @@ All the project's dependancies are found in the requirements.txt file.Open it fo
 
   - HTML
   - CSS
+  - Django
   - Python3.6
   - Javascript
   - Postgresql
