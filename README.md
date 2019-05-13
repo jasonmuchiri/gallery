@@ -21,12 +21,12 @@ A simple application that displays a variety of photos and their details once cl
 - python pip ~ to install pip activate virtual environment `source virtual/bin/activate` then run `curl https://bootstrap.pypa.io/get-pip.py | python`
 
 - Postgres ~ to install follow the following commands in your home directory:
-    `sudo apt-get update`
-    `sudo apt-get install postgresql postgresql-contrib libpq-dev`
-    `sudo service postgresql start`
-    `sudo -u postgres createuser --superuser $USER`
-    `sudo -u postgres createdb $USER`
-    `touch .psql_history`
+    - `sudo apt-get update`
+    - `sudo apt-get install postgresql postgresql-contrib libpq-dev`
+    - `sudo service postgresql start`
+    - `sudo -u postgres createuser --superuser $USER`
+    - `sudo -u postgres createdb $USER`
+    - `touch .psql_history`
 
 ### Installation instructions
 
@@ -39,17 +39,17 @@ A simple application that displays a variety of photos and their details once cl
    `pip3 install -r requirements.txt`
 
 - Create a database 
-   `psql`
-   `CREATE DATABASE gallery;`
+   - `psql`
+   - `CREATE DATABASE gallery;`
 
 - Run initial migration
 
-   `python3.6 manage.py makemigrations gallery`
-   `python3.6 manage.py migrate`
+   - `python3.6 manage.py makemigrations gallery`
+   - `python3.6 manage.py migrate`
 
 - Run the app
 
-   `python3.6 manage.py runserver`
+   - `python3.6 manage.py runserver`
 
 - Open the `localhost:8000` to check if the app is running successfully.
 
