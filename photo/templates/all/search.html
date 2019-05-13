@@ -1,0 +1,37 @@
+{% extends 'all/base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+
+{% block content %}
+{{block.super}}
+
+<div class="container">
+  <div class="row">
+    {% if pics %}
+    <h2 style='text-align:center;'>Found {{pics|length }} Results</h2>
+    {% else %}
+    <h2 style='text-align:center;'>There are no such pictures. You will be redirected to the main page in: <span id="counter">7</span></h2>
+    <script>
+      setInterval(function () {
+        var div = document.querySelector("#counter");
+        var count = div.textContent * 1 - 1;
+        div.textContent = count;
+        if (count <= 0) {
+          window.location.replace("{% url 'default' %}");
+        }
+      }, 1000);
+    </script>
+    {% endif %}
+  </div>
+</div>
+
+<div class="grid">
+  {% if pics %}
+  {% for pic in pics %}
+  <section class="grid-item">
+    <img src="{{pic.image.url}}" alt="Searched Pic">
+  </section>
+</div>
+{% endfor %}
+{% endif %}
+{% endblock %}
