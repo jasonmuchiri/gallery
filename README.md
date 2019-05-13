@@ -65,7 +65,7 @@ All the project's dependancies are found in the requirements.txt file.Open it fo
   - Python3.6
   - Javascript
   - Postgresql
-  - Bootstrap4
+  - Bootstrap3
 
 ## Live link in heroku
 
