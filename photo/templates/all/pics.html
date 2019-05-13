@@ -1,0 +1,38 @@
+
+{% extends 'all/base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+
+{% block content %}
+{{block.super}}
+
+<div class="grid">
+  {% for pic in pics %}
+  <section class='grid-item'>
+    <img data-target='#myModal' onclick='showModal("{{pic.image_name}}", "{{pic.image_description}}", "{{pic.pub_date}}", "{{pic.location}}", "{{pic.image.url}}")'
+    class='uploads' class='img-responsive' src="{{pic.image.url}}" alt="Picture">
+  </section>
+</div>
+
+<div id='modal-container' class="container">
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 style='text-align:center;' id='trueLink' onclick='copyLink()' class="modal-title">Copy Link</h4>
+        </div>
+        <div class="modal-body">
+          <p><input type="text" id='link'></p>
+          <p><img class='img-responsive' src="" alt="Modal Image"></p>
+          <p><span style='font-weight:bold;'>Title:</span><h6 id='title'></h6></p>
+          <p><span style='font-weight:bold;'>Description:</span><h6 id='description'></h6></p>
+          <p><span style='font-weight:bold;'>Date Published:</span><h6 id='pub_date'></h6></p>
+          <p><span style='font-weight:bold;'>Taken In:</span><h6 id='location'></h6></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endfor %}
+{% endblock %}
