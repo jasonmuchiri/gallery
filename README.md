@@ -69,7 +69,7 @@ All the project's dependancies are found in the requirements.txt file.Open it fo
 
 ## Live link in heroku
 
-
+https://photo-gala.herokuapp.com/
 
 ## Contacts
 
