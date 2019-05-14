@@ -71,6 +71,11 @@ All the project's dependancies are found in the requirements.txt file.Open it fo
 
 
 
+## Contacts
+
+For help and support feel free to contact me :
+jasonmkinyua@gmail.com
+
 ## License
 
 MIT License
